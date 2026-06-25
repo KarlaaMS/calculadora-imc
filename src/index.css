@@ -196,7 +196,9 @@ nav ul a:hover { color: var(--muted); font-weight: bold; }
   max-width: 50%; 
   margin-bottom: 10px; 
   border-radius: 10px; 
+  max-width: 100%;
 }
+
 .formulario-container h2 {
     font-family: var(--mono); 
     font-size: 50px;
@@ -394,15 +396,21 @@ button:active {
   filter: drop-shadow(0 4px 20px rgba(0,0,0,0.15));
 }
 
-/* HAMBURGUESA */ 
 .hamburguesa {
   display: none;
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--accent);
-  font-size: 1.2rem;
-  padding: 0.4rem 0.75rem;
-  cursor: progress;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .hamburguesa {
+    display: block;
+  }
 }
 
 .nav-mobile {
@@ -472,5 +480,59 @@ button:active {
   .home-imagen img {
     max-width: 280px;
   }
+  /* NAVBAR */
+  nav {
+    padding: 0.75rem 1rem;
+    flex-wrap: nowrap;
+  }
+
+  nav p {
+    font-size: 18px;
+  }
+
+  #LogoCalculadora {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+  }
+
+  nav ul.nav-links {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: block;
+  }
+
+  /* FORMULARIO */
+  .formulario-container {
+    padding: 1.5rem;
+  }
+
+  .formulario-container h2 {
+    font-size: 2rem;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .campo input,
+  .campo select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .boton-calcular {
+    width: 100%;
+  }
+
 }
 
