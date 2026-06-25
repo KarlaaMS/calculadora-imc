@@ -21,7 +21,7 @@
     --border: #c0bdbd;
     --text: #1F1D1C; 
     --muted: #405641;
-    --accent: #59794f;
+    --accent: #4F6F52;
     --accent-dim: rgba(208, 205, 199, 0.214);
     --mono: 'LXGW Marker Gothic', monospace;
     --serif: 'Overlock', serif;
@@ -284,6 +284,116 @@ button:active {
     gap: 10px; 
     margin-bottom: 10px;
 }
+
+/* RESULTADO */
+.resultado-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 6rem 4rem 2rem;
+  gap: 3rem;
+}
+
+.resultado-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resultado-info h2 {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--text);
+}
+
+.imc-numero {
+  font-family: var(--serif);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.imc-categoria {
+  border-left: 4px solid;
+  padding-left: 1rem;
+}
+
+.categoria-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.categoria-texto {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.imc-escala {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--surface);
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.escala-item {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.boton-volver {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: fit-content;
+  transition: opacity 0.2s;
+}
+
+.boton-volver:hover { opacity: 0.85; }
+
+.resultado-svg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .resultado-container {
+    flex-direction: column;
+    padding: 6rem 1.5rem 2rem;
+    align-items: center;
+  }
+
+  .imc-numero { font-size: 4rem; }
+}
+
+.cuerpo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cuerpo-imagen {
+  max-height: 450px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.15));
+}
+
 /* HAMBURGUESA */ 
 .hamburguesa {
   display: none;
