@@ -1,39 +1,38 @@
 import LogoCalculadora from '../assets/LogoCalculadora.svg'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function Navbar (){
-    
-    const [abierto, setAbierto] = useState(false)
-    return (
+function Navbar() {
+  const [abierto, setAbierto] = useState(false)
+
+  return (
     <nav>
-        <span><img src={LogoCalculadora} id="LogoCalculadora"></img>
-        <p><a href="/#">Calculadora IMC</a></p></span>
-        <ul className="nav-links">
-        <li><a href="/que-es-imc" onClick={() => setAbierto(false)}>¿Qué es IMC?</a></li>
-        <li><a href="/adultos" onClick={() => setAbierto(false)}>IMC Adultos</a></li>
-        <li><a href="/menores" onClick={() => setAbierto(false)}>IMC Niños</a></li>
-        <li><a href="/ayuda" onClick={() => setAbierto(false)}>Ayuda</a></li>
+      <span>
+        <img src={LogoCalculadora} id="LogoCalculadora" />
+        <Link to="/" id="titulo"><p>Calculadora IMC</p></Link>
+      </span>
+
+      <ul className="nav-links">
+        <li><Link to="/que-es-imc">¿Qué es IMC?</Link></li>
+        <li><Link to="/adultos">IMC Adultos</Link></li>
+        <li><Link to="/menores">IMC Niños</Link></li>
+        <li><Link to="/ayuda">Ayuda</Link></li>
       </ul>
 
-      {/* Botón hamburguesa */}
-      <button
-        className="hamburguesa"
-        onClick={() => setAbierto(!abierto)}
-      >
+      <button className="hamburguesa" onClick={() => setAbierto(!abierto)}>
         {abierto ? '✕' : '☰'}
       </button>
 
-      {/* Menú móvil */}
       {abierto && (
         <ul className="nav-mobile">
-          <li><a href="/que-es-imc" onClick={() => setAbierto(false)}>¿Qué es IMC?</a></li>
-          <li><a href="/adultos" onClick={() => setAbierto(false)}>IMC Adultos</a></li>
-          <li><a href="/menores" onClick={() => setAbierto(false)}>IMC Menores</a></li>
-          <li><a href="#ayuda" onClick={() => setAbierto(false)}>Ayuda</a></li>
+          <li><Link to="/que-es-imc" onClick={() => setAbierto(false)}>¿Qué es IMC?</Link></li>
+          <li><Link to="/adultos" onClick={() => setAbierto(false)}>IMC Adultos</Link></li>
+          <li><Link to="/menores" onClick={() => setAbierto(false)}>IMC Niños</Link></li>
+          <li><Link to="/ayuda" onClick={() => setAbierto(false)}>Ayuda</Link></li>
         </ul>
       )}
     </nav>
-    )
+  )
 }
 
 export default Navbar

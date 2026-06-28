@@ -64,7 +64,7 @@ nav p {
     font-size: 35px;
 }
 
-nav p a {
+#titulo {
     text-decoration: none; 
     color: var(--text)
 }
