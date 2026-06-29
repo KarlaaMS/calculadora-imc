@@ -9,7 +9,7 @@ function Navbar() {
     <nav>
       <span>
         <img src={LogoCalculadora} id="LogoCalculadora" />
-        <Link to="/" id="titulo"><p>Calculadora IMC</p></Link>
+        <a href="/#home" id="titulo"><p>Calculadora IMC</p></a>
       </span>
 
       <ul className="nav-links">

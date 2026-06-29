@@ -5,7 +5,7 @@ function Home() {
   const navigate = useNavigate()
 
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="home-contenido">
         <h1 className="home-titulo">Calculadora <span>IMC</span></h1>
         <p className="home-subtitulo">Conoce tu índice de masa corporal y lo que significa para tu salud</p>

@@ -8,6 +8,7 @@ import Resultado from './components/Resultado'
 import FormularioMenores from './components/FormularioMenores'
 import IMC from './components/QueEsImc'
 import Ayuda from './components/ayuda'
+import Footer from './components/Footer'
 
 import './index.css'
 
@@ -21,6 +22,7 @@ function App() {
             <Home/>
             <IMC/>
             <Ayuda/>
+            <Footer/>
           </>
         }/>
         <Route path="/adultos" element={<FormularioAdultos/>}/>
