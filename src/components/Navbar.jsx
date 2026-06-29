@@ -13,10 +13,10 @@ function Navbar() {
       </span>
 
       <ul className="nav-links">
-        <li><Link to="/que-es-imc">¿Qué es IMC?</Link></li>
+        <li><a href="/#IMC">¿Qué es IMC?</a></li>
         <li><Link to="/adultos">IMC Adultos</Link></li>
         <li><Link to="/menores">IMC Niños</Link></li>
-        <li><Link to="/ayuda">Ayuda</Link></li>
+        <li><a href="/#ayuda">Ayuda</a></li>
       </ul>
 
       <button className="hamburguesa" onClick={() => setAbierto(!abierto)}>
@@ -25,10 +25,10 @@ function Navbar() {
 
       {abierto && (
         <ul className="nav-mobile">
-          <li><Link to="/que-es-imc" onClick={() => setAbierto(false)}>¿Qué es IMC?</Link></li>
+          <li><a href="/#IMC" onClick={() => setAbierto(false)}>¿Qué es IMC?</a></li>
           <li><Link to="/adultos" onClick={() => setAbierto(false)}>IMC Adultos</Link></li>
           <li><Link to="/menores" onClick={() => setAbierto(false)}>IMC Niños</Link></li>
-          <li><Link to="/ayuda" onClick={() => setAbierto(false)}>Ayuda</Link></li>
+          <li><a href="/#ayuda" onClick={() => setAbierto(false)}>Ayuda</a></li>
         </ul>
       )}
     </nav>

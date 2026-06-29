@@ -17,7 +17,7 @@
 
 :root {
     --bg: #bfdea56a; 
-    --surface: #D4C6C3; 
+    --surface: #b2c6a9; 
     --border: #c0bdbd;
     --text: #1F1D1C; 
     --muted: #405641;
@@ -371,6 +371,181 @@ button:active {
   min-height: 400px;
 }
 
+/* QUE ES IMC */ 
+
+.que-titulo {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  color: var(--text);
+  text-align: center;
+  padding: 2rem 0 1rem;
+  border-bottom: 2px solid var(--accent);
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.parrafo {
+  font-family: var(--serif);
+  font-size: 20px; 
+  margin-top: 3rem; 
+}
+
+.parrafo span {
+  color: var(--muted); 
+  font-weight: bold;
+}
+
+aside {
+  display: flex; 
+  flex-direction: row;
+  gap: 20px;   /* Separacion entre columnas */      
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+#imagenTabla {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 400px;
+  transform: translate(-50%, -50%); /* Empuja la imagen a su centro exacto */
+  display: block;
+}
+
+ul.lista-bonita {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  list-style: none; /* Elimina los puntos por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+ul.lista-bonita li {
+  background-color: var(--bg);
+  margin-bottom: 12px; /* Separación entre elementos */
+  padding: 15px 20px; /* Espaciado interno */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--accent);
+  border-left: 5px solid var(--muted); /* Franja decorativa a la izquierda */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: var(--sans);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+ul.lista-bonita li:hover {
+  transform: translateY(-3px); /* Levanta un poco el elemento */
+  box-shadow: 0 6px 12px var(--muted); /* Sombra más profunda */
+}
+
+.sub-titulo {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  color: var(--text);
+  margin: 2rem 0 1rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.sub-titulo-2 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.formulas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.formula-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formula-card h4 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.nota {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.nota-final {
+  background: var(--accent-dim);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+
+.contenido-texto {
+  flex: 2;
+}
+
+.contenido-imagen {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .formulas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contenido-imagen {
+    width: 100%;
+  }
+}
+
+.bloque {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bloque-completo {
+  padding: 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imagen-tabla {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 8px;
+}
+
+
 @media (max-width: 768px) {
   .resultado-container {
     flex-direction: column;
@@ -536,3 +711,55 @@ button:active {
 
 }
 
+/* RESPONSIVE QUE ES IMC */ 
+
+@media (max-width: 768px) {
+
+  /* TÍTULO */
+  .que-titulo {
+    font-size: 28px;
+    margin-left: 1rem;
+  }
+
+  /* ASIDE - de fila a columna */
+  aside {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  /* PÁRRAFO */
+  .parrafo {
+    font-size: 16px;
+    margin-top: 1.5rem;
+  }
+
+  /* IMAGEN - fluida */
+  #imagenTabla {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: auto;
+    left: auto;
+    top: auto;
+  }
+
+  /* LISTA - una sola columna en móvil */
+  ul.lista-bonita {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .bloque {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .bloque-completo {
+    padding: 1.5rem;
+  }
+
+  .imagen-tabla {
+    max-width: 100%;
+  }
+}
