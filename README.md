@@ -34,7 +34,7 @@ Calculadora IMC es un proyecto, creado con el fin de facilitar el calculo y la i
  * ¿Por qué el IMC de niños usa percentiles?
 
  Acceder a la sección de ayuda
- **[Sección ayuda](https://imcalculadora.vercel.app/#ayuda)**
+ **[Sección ayuda](https://imcalculadora.vercel.app/ayuda)**
 
 ## Secciones
 
