@@ -4,7 +4,7 @@ import CuerpoHumano from './CuerpoHumano'
 function Resultado() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { imc, tipo, genero } = location.state || {}
+  const { imc, tipo, genero, percentil } = location.state || {}
 
   function getCategoria(imc) {
     if (imc < 18.5) return { texto: 'Bajo peso', color: '#6E8FC9' }
@@ -15,12 +15,13 @@ function Resultado() {
   }
 
   const categoria = getCategoria(parseFloat(imc))
+  
 
   return (
+    
     <div className="resultado-container">
       <div className="resultado-info">
         <h2>Tu resultado</h2>
-
         <div className="imc-numero" style={{ color: categoria.color }}>
           {imc}
         </div>
@@ -59,7 +60,7 @@ function Resultado() {
       </div>
 
       <div className="resultado-svg">
-        <CuerpoHumano imc={parseFloat(imc)} genero={genero} />
+        <CuerpoHumano imc={parseFloat(imc)} genero={genero} tipo={tipo} percentil={percentil} />
       </div>
     </div>
   )
