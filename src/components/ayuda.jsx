@@ -26,7 +26,7 @@ function Ayuda() {
         }, 
         {
             id: 4, 
-            pregunta: "¿Qué hago si mi IMC está fuera del rango normal", 
+            pregunta: "¿Qué hago si mi IMC está fuera del rango normal?", 
             respuesta: "Consulta a tu médico o nutricionista. El IMC es un punto de partida, no una sentencia. Factores como la masa muscular, la edad y el grupo étnico también influyen."
         }, 
         {

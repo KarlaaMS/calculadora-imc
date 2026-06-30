@@ -7,7 +7,7 @@ import FormularioAdultos from './components/FormularioAdultos'
 import Resultado from './components/Resultado'
 import FormularioMenores from './components/FormularioMenores'
 import IMC from './components/QueEsImc'
-import Ayuda from './components/ayuda'
+import Ayuda from './components/Ayuda'
 import Footer from './components/Footer'
 
 import './index.css'
